@@ -43,8 +43,8 @@ Optional: resistors, Battery clips
             <td>GND</td>
             <td>GND</td>
             <td>GND | VCC</td>
-            <td>GND</td>
-            <td>GND</td>
+            <td>3.3V</td>
+            <td>3.3V</td>
         </tr>
         <tr>
             <td>D10</td>
@@ -67,4 +67,50 @@ Optional: resistors, Battery clips
             <td>-</td>
             <td>-</td>
         </tr>
-    </table>
+</table>
+
+<table>
+        <tr>
+            <th>Arduino Uno Pins</th>
+            <th>PAJ7620 Pins</th>
+        </tr>
+        <tr>
+            <td>3.3V</td>
+            <td>VIN</td>
+        </tr>
+        <tr>
+            <td>GND</td>
+            <td>GND</td>
+        </tr>
+        <tr>
+            <td>A5</td>
+            <td>SCL</td>
+        </tr>
+        <tr>
+            <td>A4</td>
+            <td>SCA</td>
+        </tr>
+</table>
+
+<table>
+        <tr>
+            <th>Arduino Uno Pins</th>
+            <th>Ultrasonic sensor Pins</th>
+        </tr>
+        <tr>
+            <td>3.3V</td>
+            <td>Vcc</td>
+        </tr>
+        <tr>
+            <td>AD</td>
+            <td>Trig</td>
+        </tr>
+        <tr>
+            <td>D7</td>
+            <td>Echo</td>
+        </tr>
+        <tr>
+            <td>GND</td>
+            <td>Gnd</td>
+        </tr>
+</table>
