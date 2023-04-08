@@ -114,3 +114,11 @@ Optional: resistors, Battery clips
             <td>Gnd</td>
         </tr>
 </table>
+
+
+
+References:
+1. https://howtomechatronics.com/tutorials/arduino/arduino-wireless-communication-nrf24l01-tutorial/
+2. https://howtomechatronics.com/tutorials/arduino/how-to-build-an-arduino-wireless-network-with-multiple-nrf24l01-modules/
+3. https://arduinogetstarted.com/tutorials/arduino-ultrasonic-sensor
+4. https://github.com/palsayantan/Gesture-Control-Neopixel-LED-game/blob/master/Gesture_Game/Gesture_Game.ino
