@@ -33,14 +33,18 @@ Optional: resistors, Battery clips
 
 <table>
         <tr>
-            <th>Book Name</th>
-            <th>Author Name</th>
-            <th>Genre</th>
+            <th>Arduino Nano Pins</th>
+            <th>Arduino Uno Pins</th>
+            <th>NRF24L01 Pins</th>
+            <th>Arduino Uno Pins</th>
+            <th>Arduino Nano Pins</th>
         </tr>
         <tr>
-            <td>The Book Thief</td>
-            <td>Markus Zusak</td>
-            <td>Historical Fiction</td>
+            <td>GND</td>
+            <td>GND</td>
+            <td>GND<\t>VCC</td>
+            <td>GND</td>
+            <td>GND</td>
         </tr>
         <tr>
             <td>The Cruel Prince</td>
