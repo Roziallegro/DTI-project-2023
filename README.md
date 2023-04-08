@@ -30,3 +30,26 @@ Optional: resistors, Battery clips
 
 ## Wiring
 <img src="https://github.com/Roziallegro/DTI-project-2023/blob/main/assets/Arduino%20schematics.png">
+
+<table>
+        <tr>
+            <th>Book Name</th>
+            <th>Author Name</th>
+            <th>Genre</th>
+        </tr>
+        <tr>
+            <td>The Book Thief</td>
+            <td>Markus Zusak</td>
+            <td>Historical Fiction</td>
+        </tr>
+        <tr>
+            <td>The Cruel Prince</td>
+            <td>Holly Black</td>
+            <td>Fantasy</td>
+        </tr>
+        <tr>
+            <td>The Silent Patient</td>
+            <td> Alex Michaelides</td>
+            <td>Psychological Fiction</td>
+        </tr>
+    </table>
