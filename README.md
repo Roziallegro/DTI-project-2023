@@ -2,7 +2,7 @@
 _Code name: سالم (Salem or Peace in Arabic)_  
 _This project focuses on how light structures can help integrate interaction and promote youth culture amongst youths_  
 [full project report](http://asd.courses.sutd.edu.sg/dti-teams/projects-2023/cohort-4-projects-2023/cohort-4-team-2/)  
-
+<br>
 
 ## Hardwares used
 1x Arduino Uno  
