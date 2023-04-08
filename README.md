@@ -29,6 +29,9 @@ Optional: resistors, Battery clips
 <br>
 
 ## Wiring
+Overall layout
+<img src="https://github.com/Roziallegro/DTI-project-2023/blob/main/assets/Overall%20node.png">
+
 <img src="https://github.com/Roziallegro/DTI-project-2023/blob/main/assets/Arduino%20schematics%20updated.png">
 
 <table>
