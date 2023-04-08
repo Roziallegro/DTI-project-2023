@@ -18,7 +18,7 @@ PCB
 Voltage regulator  
 10x 3pin-head with screws  
 Optional: resistors, Battery clips  
-
+<br>
 
 ## Libraries used
 [Neopixel library](https://github.com/adafruit/Adafruit_NeoPixel)  
