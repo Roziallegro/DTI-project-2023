@@ -29,3 +29,4 @@ Optional: resistors, Battery clips
 <br>
 
 ## Wiring
+<img src="https://github.com/Roziallegro/DTI-project-2023/blob/main/assets/Arduino%20schematics.png">
