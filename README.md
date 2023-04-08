@@ -1,14 +1,14 @@
 # DTI-project-2023
-_Code name: سالم (Salem or Peace in Arabic)_
-_This project focuses on how light structures can help integrate interaction and promote youth culture amongst youths_
+_Code name: سالم (Salem or Peace in Arabic)_  
+_This project focuses on how light structures can help integrate interaction and promote youth culture amongst youths_  
 [full project report](http://asd.courses.sutd.edu.sg/dti-teams/projects-2023/cohort-4-projects-2023/cohort-4-team-2/)
 
 ### Hardwares used
-1x Arduino Uno
-3x Arduino Nano
-4x NRF24L01 Wireless transmission radio
-1x PAJ7620 Hand gesture sensor
-1x Ultrasonic sensor
+1x Arduino Uno  
+3x Arduino Nano  
+4x NRF24L01 Wireless transmission radio  
+1x PAJ7620 Hand gesture sensor  
+1x Ultrasonic sensor  
 
 Wires
 5m Neopixel LED (5V or 12V)
