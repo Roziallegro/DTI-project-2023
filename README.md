@@ -42,18 +42,29 @@ Optional: resistors, Battery clips
         <tr>
             <td>GND</td>
             <td>GND</td>
-            <td>GND<\t>VCC</td>
+            <td>GND | VCC</td>
             <td>GND</td>
             <td>GND</td>
         </tr>
         <tr>
-            <td>The Cruel Prince</td>
-            <td>Holly Black</td>
-            <td>Fantasy</td>
+            <td>D10</td>
+            <td>D9</td>
+            <td>CE | CSN</td>
+            <td>D10</td>
+            <td>D9</td>
         </tr>
         <tr>
-            <td>The Silent Patient</td>
-            <td> Alex Michaelides</td>
-            <td>Psychological Fiction</td>
+            <td>D13</td>
+            <td>D13</td>
+            <td>SCK | MOSI</td>
+            <td>D11</td>
+            <td>D11</td>
+        </tr>
+        <tr>
+            <td>D12</td>
+            <td>D12</td>
+            <td>MISO | IRQ</td>
+            <td>-</td>
+            <td>-</td>
         </tr>
     </table>
