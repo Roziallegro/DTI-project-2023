@@ -26,6 +26,6 @@ Optional: resistors, Battery clips
 [RF24 Network library](https://www.arduinolibraries.info/libraries/rf24-network)  
 [RF24 library](https://www.arduinolibraries.info/libraries/rf24-network)  
 [SPI library](https://github.com/codebendercc/arduino-library-files/tree/master/libraries/SPI)  
-
+<br>
 
 ### Wiring
