@@ -8,7 +8,7 @@ _This project focuses on how light structures can help integrate interaction and
 1x Arduino Uno  
 3x Arduino Nano  
 4x NRF24L01 Wireless transmission radio  
-1x PAJ7620 Hand gesture sensor  
+1x PAJ7620 Hand gesture sensor (Datasheet)[https://www.epsglobal.com/Media-Library/EPSGlobal/Products/files/pixart/PAJ7620U2.pdf] 
 1x Ultrasonic sensor  
 
 Wires  
