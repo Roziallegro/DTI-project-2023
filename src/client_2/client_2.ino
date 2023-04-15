@@ -31,7 +31,8 @@ void light_1(); // lights up the second strip
 void light_2(); // lights up the third strip
 void light_3(); // lights up the fourth strip
 void light_off(int k); // turns off a particular strip k
-void light_all(); // lights up all the strips in one go
+void light_up(); // lights up all the strips from lowest to highest
+void light_down(); // lights up all the strips from highest to lowest
 void light_blink_left(); // lights up the strip one by one from right to left
 void light_blink_right(); // lights up the strip one by one from left to right
 void light_run(); // neopixel running effect
@@ -64,19 +65,24 @@ void loop() {
     network.read(header, &incomingData, sizeof(incomingData)); // Read the incoming data
     Serial.println(incomingData);
 
-    if (incomingData==1 || incomingData==2){
-      // if up or down gesture, light up all the strips at one go
-      light_all();
+    if (incomingData==1){
+      // if up gesture, light the strips from lowest to highest
+      light_up();
+    }
+    else if (incomingData==2){
+      // if down gesture, light the strips from highest to lowest
+      light_down();
     }
     else if (incomingData==3){
-      // if left or right gesture, light up the strips one by one
+      // if left gesture, light up the strips one by one from right to left
       light_blink_left();
+    }
+    else if (incomingData==4){
+      // if right gesture, light up the strips one by one from left to right
+      light_blink_right();
     }
     else if (incomingData==5){
       light_run();
-    }
-    else{
-      light_blink_right();
     }
   }
 }
@@ -123,32 +129,67 @@ void light_off(int k){
 }
 
 
-void light_all(){
-  // lights up all the strips in one go
-  light_0();
-  light_1();
-  light_2();
-  light_3();
-  delay(500);
-  // after 0.5 sec, turn off all pixels
-  for (int k=0; k<NUMSTRIPS; k++){
-    strips[k].clear();
-    strips[k].show();
-  }
-}
-
-
-void light_blink_left(){
-  // lights up the strip one by one from right to left
+void light_up(){
+  // -------
+  delay(200);
+  // -------
   light_3();
   delay(200);
   light_off(3);
-  light_2();
-  delay(200);
-  light_off(2);
+  // -------
   light_1();
   delay(200);
   light_off(1);
+  // -------
+  delay(200);
+  // -------
+  light_0();
+  light_2();
+  delay(200);
+  light_off(0);
+  light_off(2);
+}
+
+
+void light_down(){
+  light_0();
+  light_2();
+  delay(200);
+  light_off(0);
+  light_off(2);
+  // -------
+  delay(200);
+  // -------
+  light_1();
+  delay(200);
+  light_off(1);
+  // -------
+  light_3();
+  delay(200);
+  light_off(3);
+}
+
+void light_blink_left(){
+  // lights up the strip one by one from right to left
+  // -------
+  delay(200);
+  // -------
+  light_2();
+  delay(200);
+  light_off(2);
+  // -------
+  light_3();
+  delay(200);
+  light_off(3);
+  // -------
+  delay(400);
+  // -------
+  light_1();
+  delay(200);
+  light_off(1);
+  // -------
+  delay(200);
+  // -------
   light_0();
   delay(200);
   light_off(0);
@@ -160,15 +201,24 @@ void light_blink_right(){
   light_0();
   delay(200);
   light_off(0);
+  // -------
+  delay(200);
+  // -------
   light_1();
   delay(200);
   light_off(1);
-  light_2();
-  delay(200);
-  light_off(2);
+  // -------
+  delay(400);
+  // -------
   light_3();
   delay(200);
   light_off(3);
+  // -------
+  delay(200);
+  // -------
+  light_2();
+  delay(200);
+  light_off(2);
 }
 
 
