@@ -6,12 +6,6 @@
 #include <SPI.h>
 
 
-// Reaction time initialisation
-int GES_REACTION_TIME = 100; // adjust reaction time according to circumstance
-int GES_ENTRY_TIME = 100; // when recognising Forward/Backward gestures, reaction time must be less than GES_ENTRY_TIME(0.8s) 
-int GES_QUIT_TIME = 200;
-
-
 // Radio pin & address initialisation
 RF24 radio(9, 10);               // nRF24L01 (CE,CSN)
 RF24Network network(radio);      // Include the radio in the network
@@ -31,11 +25,12 @@ float duration_us, distance_cm;
 void send_signal_up(int movement[0]); // gets called when a recognised gesture is sent to nodes
 void send_signal_down(int movement[0]);
 void send_signal_leftright(int movement[0]);
-// Note: this code does not recognise clockwise and anti-clockwise gestures
-int get_distance(int trigPin, int echoPin); // gets called to check if a hand if hovering instead of moving
 // a moving hand will get picked up by the gesture sensor 
 //while a hovering (stationary) hand will get picked up by the ultrasonic sensor
 void send_signal_run();
+
+// Note: this code does not recognise clockwise and anti-clockwise gestures
+
 
 void setup() {
   // Paj7620 initialisation & error handling
@@ -78,7 +73,7 @@ void loop() {
     
     // if no gesture detected, paj7620 will register 0
     if (data == 0){
-      // send signal to ultrasonic & check if a hand is nearby
+      // send signal to ultrasonic & check if a hand is nearby (within 5cm range from sensor)
       // generate 10-microsecond pulse to TRIG pin
       digitalWrite(trigPin, HIGH);
       delayMicroseconds(10);
@@ -99,61 +94,39 @@ void loop() {
 
       if (1.00 <= distance_cm && distance_cm <= 5.00){
         send_signal_run();
-        Serial.println("hand above");
+        Serial.println("Hand above");
       }
-      delay(500);
+      delay(200);
     }
     else{
        switch (data) {
         case GES_RIGHT_FLAG:
-          Serial.println("Right to Left");
-          send_signal_leftright(3);
+          Serial.println("Up to Down");
+          send_signal_leftright(2);
           delay(200); 
           break;
         case GES_LEFT_FLAG:
-          Serial.println("Left to Right");
-          send_signal_leftright(4);
+          Serial.println("Down to Up");
+          send_signal_leftright(1);
           delay(200);
           break;
         case GES_UP_FLAG:
-          Serial.println("Up to Down");
-          send_signal_down(2);
+          Serial.println("Left to Right");
+          send_signal_down(4);
           delay(200);
           break;
         case GES_DOWN_FLAG:
-          Serial.println("Down to Up");
-          send_signal_up(1);
+          Serial.println("Right to Left");
+          send_signal_up(3);
           delay(200);
           break;
       }
     }
-   
   }
-  delay(500);
+  delay(200);
 }
 
 // Functions definition
-
-/*
-int get_distance(int trigPin, int echoPin);
-{
-  // generate 10-microsecond pulse to TRIG pin
-  digitalWrite(trigPin, HIGH);
-  delayMicroseconds(10);
-  digitalWrite(trigPin, LOW);
-  
-  // calculate the distance
-  int distance_cm = 0.017 * duration_us;
-  
-  // print the value to Serial Monitor
-  Serial.print("distance: ");
-  Serial.print(distance_cm);
-  Serial.println(" cm");
-
-  return distance_cm;
-}*/
-
-
 // sends the movement recorded by the hand gesture sensor to the nodes
 void send_signal_up(int movement[0]){
   RF24NetworkHeader header1(node01);  // header => address where the data is going
