@@ -4,6 +4,12 @@ _This project focuses on how light structures can help integrate interaction and
 [full project report](http://asd.courses.sutd.edu.sg/dti-teams/projects-2023/cohort-4-projects-2023/cohort-4-team-2/)  
 <br>
 
+## The process  
+Change the light patterns according to how the hand gesture detected
+<img src="https://github.com/Roziallegro/DTI-project-2023/blob/main/assets/Lights%20animation%201.png">  
+<img src="https://github.com/Roziallegro/DTI-project-2023/blob/main/assets/Lights%20animation%202.png">  
+<br>
+
 ## Hardwares used
 1x Arduino Uno  
 3x Arduino Nano  
@@ -119,6 +125,14 @@ Overall layout
 </table>
 <br>
 
+## Appendix
+A brief rundown as to how the server, client, hand gesture and wireless transmission radio works
+<img src="https://github.com/Roziallegro/DTI-project-2023/blob/main/assets/Server.png">  
+<img src="https://github.com/Roziallegro/DTI-project-2023/blob/main/assets/Client.png"> 
+<img src="https://github.com/Roziallegro/DTI-project-2023/blob/main/assets/Hand%20gesture.png">  
+<img src="https://github.com/Roziallegro/DTI-project-2023/blob/main/assets/Transmission.png">  
+<img src="https://github.com/Roziallegro/DTI-project-2023/blob/main/assets/Ultrasonic.png">  
+<br>
 
 ## References
 1. https://howtomechatronics.com/tutorials/arduino/arduino-wireless-communication-nrf24l01-tutorial/
